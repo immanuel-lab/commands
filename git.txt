@@ -1,0 +1,74 @@
+git init-
+git add .-
+
+git commit -m "message name"-
+git origin-
+git push origin main(with branch name)-
+git clone-
+git branch-
+git checkout-
+git log-
+git branch -d branch_name      -Delete a merged branch
+git branch -D branch_name     - Force delete an unmerged branch
+git remote -v
+git revert-
+
+git status-This command will show you a list of all untracked files, 
+git ls-files --others --exclude-standard-If you want to see untracked files that are not added to your local repository yet, use:
+git config --get remote.origin.url   -get url of repository
+
+
+
+
+TO CHANGE COMMIT 
+
+git commit --amend -C <COMMIT ID> --edit
+
+this will open editor
+
+use ctrl + i to edit
+after editing
+press esc and shift with zz to come out of editor
+
+and then git push --force-with-lease
+
+
+
+
+
+
+
+TO REVERT CHANGES
+this will remove files commited in local and remote repo ,,but old commit will be there with new commit
+
+git revert <commit id>
+
+opens editior
+
+use ctrl + i to edit messages
+
+and shift + zz to come out
+
+and finally push
+
+
+
+
+
+
+GIT BLAME
+git blame is a Git command that shows the last modification made to each line of a file, along with the commit information and author who made the change. It's useful for tracking changes and understanding the history of a file.
+
+git blame <file_name>
+
+Options:
+-L <start>,<end>: Show only the changes made to the specified line range.
+-c: Show the commit information in a more compact format.
+-w: Ignore whitespace changes.
+-p: Show the patch introduced in the commit.
+
+
+git blame -L 10,20 -c my_file.txt
+
+to add lines
+git blame -L 1,+2 "src\components\Abort.jsx"
