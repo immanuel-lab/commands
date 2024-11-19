@@ -1,0 +1,54 @@
+alert()-open alert message
+confirm()-displays a dialog box with a message, an OK button, and a Cancel button.
+prompt()-displays a dialog box that prompts the user for input.
+print()-prints the contents of the current window
+stop() method stops window loading
+
+
+
+atob()-converts encoded string into message
+btoa()-converts string to base64
+
+open()-opens a new browser window, or a new tab, depending on your browser settings and the parameter values. 
+window.open('', '_blank', 'width=800,height=600');
+close()-closes a window
+
+blur()- removes focus from a window.
+focus()- sets focus to a window.
+
+
+localStorage-allows you to save key/value pairs in the browser
+can check the saved key\value in local storage in application
+localStorage.setItem(key, value);
+localStorage.getItem(key, value);
+localStorage.clear();
+
+sessionStorage -object let you store key/value pairs in the browser only for a session
+
+
+scrollx- property returns the pixels a document has scrolled from the upper left corner of the window.
+scrolly- property returns the pixels a document has scrolled from the upper left corner of the window.
+scrollTo(xaxis,yaxis)- method scrolls the document to specified coordinates.
+scrollBy(xaxis,yaxis)- method scrolls the document by the specified number of pixels.
+
+resizeTo()- method resizes a window to a new width and height.(coordinates)
+resizeBy()-method resizes a window by a specified amount (deducts or add to original)
+// Reduce window size by 200x100 pixels
+window.resizeBy(-200, -100);
+
+
+innerHeight-The height of the browser window's content area, in pixels.
+innerWidth-: The width of the browser window's content area, in pixels
+
+
+screen - contains information about the visitor's screen.
+screenLeft -property returns the x (horizontal) position of a window, relative to the screen
+screenLTop property returns the y (vertical) position of a window, relative to the screen
+
+screenX -returns the x (horizontal) coordinate of a window, relative to the screen
+screenY- returns the y (vertical) coordinate of a window, relative to the screen
+
+
+
+moveTo()- method moves a window to the specified coordinates on the screen.
+ moveBy() -method moves a window a number of pixels relative to its current coordinates.

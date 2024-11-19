@@ -1,0 +1,91 @@
+DOM EVENTS 
+
+
+
+Mouse Events:
+click
+dblclick
+mouseover
+mouseout
+mousemove
+mousedown
+mouseup
+contextmenu
+wheel
+Keyboard Events:
+keydown
+keyup
+keypress
+Form Events:
+submit
+reset
+change
+focus
+blur
+input
+select
+Touch Events (for touchscreen devices):
+touchstart
+touchend
+touchmove
+touchcancel
+
+
+
+Drag and Drop Events:
+draggable=true
+dragstart
+drag
+dragend
+dragenter
+dragleave
+dragover
+drop
+
+
+
+
+
+Window Events:
+load
+resize
+scroll
+unload
+beforeunload
+CSS Animation Events:
+animationstart
+animationend
+animationiteration
+transitionstart
+transitionend
+transitioncancel
+Focus Events:
+focusin
+focusout
+Clipboard Events:
+copy
+cut
+paste
+Media Events:
+play
+pause
+ended
+volumechange
+durationchange
+timeupdate
+
+
+
+Web Socket Events:
+open
+message
+error
+close
+
+
+
+
+Miscellaneous Events:
+DOMContentLoaded
+hashchange
+popstate

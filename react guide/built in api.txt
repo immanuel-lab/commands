@@ -1,0 +1,33 @@
+Built-in APIs in JavaScript
+JavaScript provides several built-in APIs that can be used to perform various tasks without the need for external libraries or frameworks. Here are some examples:
+1. DOM API
+The Document Object Model (DOM) API allows you to interact with HTML documents, manipulating elements, attributes, and events.
+Example: document.querySelector() to select an element, element.textContent to set text content.
+2. DOM Events API
+The DOM Events API allows you to handle events such as clicks, keyboard input, and mouse movements.
+Example: element.addEventListener('click', () => { ... }) to attach a click event listener.
+3. Storage API
+The Storage API provides access to browser storage, allowing you to store and retrieve data locally.
+Example: localStorage.setItem('key', 'value') to set a value, localStorage.getItem('key') to retrieve a value.
+4. History API
+The History API allows you to manipulate the browser's history, creating and navigating between states.
+Example: history.pushState({ ... }, 'Title', '/new-url') to create a new state.
+5. Geolocation API
+The Geolocation API provides access to the user's location, allowing you to get their coordinates and track their movement.
+Example: navigator.geolocation.getCurrentPosition((position) => { ... }) to get the current position.
+6. Canvas API
+The Canvas API allows you to draw graphics and images on a canvas element.
+Example: const ctx = canvas.getContext('2d'); ctx.fillStyle = 'red'; ctx.fillRect(10, 10, 50, 50); to draw a rectangle.
+7. Web Storage API
+The Web Storage API provides access to browser storage, allowing you to store and retrieve data locally.
+Example: sessionStorage.setItem('key', 'value') to set a value, sessionStorage.getItem('key') to retrieve a value.
+8. Web Workers API
+The Web Workers API allows you to run JavaScript in the background, performing computationally intensive tasks without blocking the main thread.
+Example: const worker = new Worker('worker.js'); worker.postMessage('Hello, worker!'); to create a worker.
+9. Web Sockets API
+The Web Sockets API allows you to establish a persistent, bi-directional communication channel between the client and server.
+Example: const socket = new WebSocket('ws://example.com'); socket.onmessage = (event) => { ... }; to establish a connection.
+10. Request API
+The Request API allows you to make HTTP requests to a server, retrieving data or sending data.
+Example: fetch('/api/data') .then((response) => response.json()) .then((data) => { ... }); to make a GET request.
+These are just a few examples of the many built-in APIs available in JavaScript. By using these APIs, you can create powerful and interactive web applications without relying on external libraries or frameworks.

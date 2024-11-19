@@ -1,0 +1,17 @@
+// https://play.tailwindcss.com/eaES50qZx4
+https://play.tailwindcss.com/Hw3ZXvr7MV
+
+
+flex
+flex-row(default)
+justify-center
+items-center
+flex-wrap   flex-nowrap
+content-center
+self-stretch  self-center //inside particular element
+flex-grow       //inside particular element
+flex-shrink-0    //inside particular element
+
+space-x-3 -space-x-3
+
+space-y-4 -space-y-4

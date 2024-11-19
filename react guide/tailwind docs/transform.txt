@@ -1,0 +1,70 @@
+
+
+https://play.tailwindcss.com/VubtcyqK9O
+
+
+
+transform transition 
+
+scale-refers to the size of transition
+
+duration-how long transition should take
+
+delay-refers to delay-time for transition to take place
+
+
+ease-linear    -smooth
+ease-in			-slow at start but speeds up
+ease-out		-slow at the end
+ease-in-out		-slow at the start but speeds in middle
+
+
+
+       TRANSFORMS
+scale-refers to the size of transition
+translate-element movies from its position
+rotate-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+delay-time for transition to take place

@@ -1,0 +1,53 @@
+npm install  json-server
+
+add to scripts
+ "json-server": "json-server --watch src/api/data.json --port 5000"
+
+to run
+
+npm run json-server
+
+{
+  "posts": [
+    { "id": 1, "title": "Post 1", "body": "Lorem ipsum" },
+    { "id": 2, "title": "Post 2", "body": "Lorem ipsum" }
+  ],
+  "comments": [
+    { "id": 1, "postId": 1, "body": "Comment 1" },
+    { "id": 2, "postId": 1, "body": "Comment 2" },
+    { "id": 3, "postId": 2, "body": "Comment 3" }
+  ]
+}
+
+GET http://localhost:3001/posts will return all posts.
+GET http://localhost:3001/posts/1 will return post with id 1.
+GET http://localhost:3001/comments will return all comments.
+
+
+FILTERING
+
+[
+  { "id": 1, "title": "Post 1", "author": "John" },
+  { "id": 3, "title": "Post 3", "author": "John" }
+]
+
+
+GET http://localhost:5000/items?name=Lettuce
+
+
+
+sorting
+
+
+GET http://localhost:3001/posts?_sort=author
+
+
+To sort posts by date in descending order, you would use: GET http://localhost:3001/posts?_sort=date&_order=desc
+
+	PAGINATION
+	by default each page contains 10 items
+	
+	Pagination=http://localhost:5000/posts?_page=1
+	http://localhost:5000/items?_page=3  
+	
+	http://localhost:5000/posts?_page=1&_limit=5

@@ -1,0 +1,105 @@
+Drag and Drop Events:
+
+draggable=true  to drag an element
+dragstart     -Fired when the user starts dragging an element.
+drag
+dragend     -Fired when the user releases the mouse button, ending the drag operation.
+dragenter   -Fired when the element is first dragged into another element
+dragleave   -Fired when the element is dragged out of another element
+dragover    -Fired when the element is being dragged over another element
+drop        -Fired when the element is dropped onto another element.
+
+e.clientX -e.clientX is a property of the event object e that returns the x-coordinate of the mouse cursor relative to the client area of the window
+e.clientY 
+
+e.dataTransfer: This is an object that stores data related to the drag and drop operation.
+getData(): This is a method that retrieves data from the e.dataTransfer object.
+
+e.dataTransfer.getData('drag-offset-x'))-new position of x after dragging
+
+
+Here's a detailed explanation of the drag and drop events:
+
+
+1. onDragStart
+Fired when the user starts dragging an element.
+Triggered on the element being dragged.
+Event object properties:
+dataTransfer: The data transfer object, which stores data to be transferred during the drag and drop operation.
+target: The element being dragged.
+relatedTarget: Not applicable for onDragStart.
+Use case: Set the data to be transferred, specify the effect (e.g., copy, move), and update the UI to indicate the drag operation has started.
+
+
+
+
+
+2. onDrag
+Fired repeatedly while the element is being dragged.
+Triggered on the element being dragged.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element being dragged.
+relatedTarget: The element over which the drag operation is currently taking place.
+Use case: Update the UI to reflect the current drag position, and perform any necessary calculations or checks.
+
+
+
+
+3. onDragEnd
+Fired when the user releases the mouse button, ending the drag operation.
+Triggered on the element being dragged.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element being dragged.
+relatedTarget: The element where the drop occurred (if any).
+Use case: Update the UI to reflect the outcome of the drag operation (e.g., success or failure), and perform any necessary cleanup.
+
+
+
+4. onDragOver
+Fired when the element is being dragged over another element.
+Triggered on the element being dragged over.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element being dragged over.
+relatedTarget: The element being dragged.
+Use case: Prevent the default browser behavior (e.g., navigating to a link), and update the UI to indicate the drag operation is taking place over the element.
+
+
+
+5. onDragEnter
+Fired when the element is first dragged into another element.
+Triggered on the element being dragged into.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element being dragged into.
+relatedTarget: The element being dragged.
+Use case: Update the UI to indicate the drag operation has entered the element.
+
+
+
+
+
+
+6. onDragLeave
+Fired when the element is dragged out of another element.
+Triggered on the element being left.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element being left.
+relatedTarget: The element being dragged.
+Use case: Update the UI to indicate the drag operation has left the element.
+
+
+
+7. onDrop
+Fired when the element is dropped onto another element.
+Triggered on the element where the drop occurred.
+Event object properties:
+dataTransfer: The data transfer object.
+target: The element where the drop occurred.
+relatedTarget: The element being dropped.
+Use case: Perform the action associated with the drop operation (e.g., copy, move, execute), and update the UI to reflect the outcome.
+By handling these events, you can create a robust and user-friendly drag and drop experience in your web application.
+

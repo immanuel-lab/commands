@@ -1,0 +1,16 @@
+import {Random} from 'random'
+
+let random=new Random()
+
+random.integer(1,100) -generates whole num between 1 and 100
+
+random.real(1,100) -generates float num between 1 and 100
+
+random.uuid()-generates random uuid
+
+random.string(10)-generates random string
+
+or
+
+
+random.string(10,'xkldsd')-generates random string with certain charecters only

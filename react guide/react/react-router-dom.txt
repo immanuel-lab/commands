@@ -1,0 +1,59 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+   <Router>
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/store" element={<Store />} />
+      </Routes>
+      </Suspense>
+    </Router>
+	
+	
+	import { Link } from 'react-router-dom';
+	
+	  <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/store">Store</Link></li>
+      </ul>
+	  
+	  
+	  
+	  
+	FOR NOT FOUND PAGE
+	   <Route path="*" element={<NotFound />} />
+	   
+	   
+	   
+	   
+	   useNavigate-to programatically redirect
+	   
+	   const naviagte=useNavigate()
+	   navigate("/home")   
+	   
+	   
+	   
+	   without adding to history stack
+	   navigate("/home",{replace:true})
+	   
+	   navigate(-1)-to go backward
+	    navigate(1)=to go forward
+		
+		
+		
+		
+		PASSING DATA FROM ONE COMPO TO ANOTHER
+		
+		 navigate("/login",{replace:true,state:{name:name})
+		 
+		 and use it another component 
+		 
+		 import {useLocation} from react-router-dom
+
+			const location =useLocation()
+			
+			<h1>{location.state.user}</h1>
+		 

@@ -1,0 +1,35 @@
+The `Object` in JavaScript is a built-in global object that comes with a variety of methods for working with objects. Here are some of the most commonly used methods and properties available on the `Object` object:
+
+1. `Object.keys(obj)`: Returns an array of strings representing all the enumerable property names (keys) of an object.
+
+2. `Object.values(obj)`: Returns an array of values of the enumerable properties of an object.
+
+3. `Object.entries(obj)`: Returns an array of key-value pairs (as arrays) for the enumerable properties of an object.
+
+4. `Object.assign(target, ...sources)`: Copies the values of all enumerable properties of one or more source objects into a target object. It is used for object cloning and merging.
+
+5. `Object.create(proto, [propertiesObject])`: Creates a new object with the specified prototype object and optional property descriptors.
+
+6. `Object.defineProperty(obj, prop, descriptor)`: Adds or modifies a property on an object with the provided property descriptor.
+
+7. `Object.getOwnPropertyDescriptor(obj, prop)`: Returns a property descriptor for a given property on an object.
+
+8. `Object.getOwnPropertyNames(obj)`: Returns an array of all property names (including non-enumerable ones) on an object.
+
+9. `Object.getOwnPropertySymbols(obj)`: Returns an array of all own symbol properties on an object.
+
+10. `Object.is(value1, value2)`: Compares two values to determine if they are the same (similar to strict equality === but with some differences in how it handles edge cases).
+
+11. `Object.isExtensible(obj)`: Checks if an object is extensible (i.e., if new properties can be added to it).
+
+12. `Object.freeze(obj)`: Freezes an object, preventing new properties from being added, existing properties from being deleted, and their attributes from being changed.
+
+13. `Object.seal(obj)`: Seals an object, preventing new properties from being added and making all existing properties non-configurable.
+
+14. `Object.setPrototypeOf(obj, prototype)`: Sets the prototype (i.e., the internal `[[Prototype]]` property) of an object.
+
+15. `Object.keys(obj)`: Returns an array of strings representing all enumerable property names (keys) of an object.
+
+16. `Object.isPrototypeOf(obj)`: Checks if an object is in the prototype chain of another object.
+
+These are some of the most commonly used methods and properties provided by the `Object` object in JavaScript. They are used for working with objects, managing object properties, and performing various operations related to object manipulation and inheritance.

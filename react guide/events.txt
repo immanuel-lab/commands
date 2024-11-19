@@ -1,0 +1,58 @@
+OnLoad: onload (fires when an object has finished loading)
+OnUnload: onunload (fires when a page is unloaded)
+
+
+
+
+Mouse Events
+OnClick: onclick (fires when a user clicks an object)
+OnMouseDown: onmousedown (fires when a user presses a mouse button over an object)
+OnMouseUp: onmouseup (fires when a user releases a mouse button over an object)
+OnMouseOver: onmouseover (fires when a user moves the mouse pointer over an object)
+OnMouseOut: onmouseout (fires when a user moves the mouse pointer away from an object)
+OnMouseEnter: onmouseenter (fires when a user moves the mouse pointer over an object, similar to onmouseover but doesn't bubble up the DOM)
+OnMouseLeave: onmouseleave (fires when a user moves the mouse pointer away from an object, similar to onmouseout but doesn't bubble up the DOM)
+OnHover: Not a standard event handler, but you can use onmouseover for similar effect
+OnWheel: onwheel (fires when a user scrolls a wheel button)
+OnDrag: ondrag (fires while a user is dragging an object)
+OnDragEnter: ondragenter (fires when a user drags an object over an element)
+OnDragLeave: ondragleave (fires when a user drags an object away from an element)
+OnDragOver: ondragover (fires while a user is dragging an object over an element)
+OnDragDrop: ondrop (fires when a user drops an object)
+
+
+
+Keyboard Events
+OnKeyDown: keydown (fires when a key is pressed)
+OnKeyPress: keypress (fires when a key is pressed and a character is generated) Note: keypress is deprecated, use keydown or keyup instead
+OnKeyUp: keyup (fires when a key is released)
+OnInput: input (fires when the value of an input field changes)
+
+
+Form Events
+OnChange: onchange (fires when the value of an object changes)
+OnFocus: onfocus (fires when an object receives focus)
+OnBlur: onblur (fires when an object loses focus)
+OnSubmit: onsubmit (fires when a form is submitted)
+OnReset: onreset (fires when a form is reset)
+
+
+
+Error and Warning Events
+OnError: onerror (fires when an error occurs)
+OnWarning: Not a standard event handler
+
+
+
+
+
+
+Media Events
+OnPlay: onplay (fires when media playback starts)
+OnPause: onpause (fires when media playback is paused)
+OnEnd: onended (fires when media playback ends)
+OnTimeUpdate: ontimeupdate (fires when the current playback position changes)
+OnLoadedData: onloadeddata (fires when media data is loaded)
+OnLoadedMetadata: onloadedmetadata (fires when media metadata is loaded)
+OnCanPlay: oncanplay (fires when media can be played)
+OnCanPlayThrough: oncanplaythrough (fires when media can be played through to the end)

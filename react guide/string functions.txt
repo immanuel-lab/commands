@@ -1,0 +1,15 @@
+1.length()-length of the string
+2.toUpperCase()-makes the string to toUpperCase
+3.toLowerCase()-makes the string to lower case
+4.split()-converts the string into array depending on inside value.
+5.join()-converts the array into string depending on inside paramters
+6.slice(),substring(),substr()-used to split the string 
+7.replace()-used to replace  first matching element in string
+8.replaceAll()-used to replace all matching elements
+9.trim()-used to remove white space at start and end
+10.trimStart()-used to remove white space at the start of the string
+11.trimEnd()-used to remove white space at the end of the string
+12.concat()-used to combine strings
+13.charAt()-used to find a charecter at particular input
+14.padStart()-add elements at start of string
+15. padEnd()-add elements at the end

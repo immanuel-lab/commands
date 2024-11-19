@@ -1,0 +1,7 @@
+VITE SETUP
+
+1.npm create vite@latest app-name
+2.npm run dev
+
+
+install tailwind

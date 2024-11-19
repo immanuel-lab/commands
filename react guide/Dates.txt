@@ -1,0 +1,69 @@
+Date Object in JavaScript
+The Date object in JavaScript represents a date and time. It provides methods to manipulate and format dates.
+Creating a Date Object
+You can create a Date object using the new Date() constructor.
+JavaScript
+const date = new Date();
+console.log(date); // Output: current date and time
+Methods
+1. Getting Date and Time
+getDate(): Returns the day of the month (1-31)
+getMonth(): Returns the month (0-11)
+getFullYear(): Returns the full year
+getHours(): Returns the hours (0-23)
+getMinutes(): Returns the minutes (0-59)
+getSeconds(): Returns the seconds (0-59)
+getMilliseconds(): Returns the milliseconds (0-999)
+JavaScript
+const date = new Date();
+console.log(date.getDate()); // Output: day of the month
+console.log(date.getMonth()); // Output: month
+console.log(date.getFullYear()); // Output: full year
+2. Setting Date and Time
+setDate(): Sets the day of the month
+setMonth(): Sets the month
+setFullYear(): Sets the full year
+setHours(): Sets the hours
+setMinutes(): Sets the minutes
+setSeconds(): Sets the seconds
+setMilliseconds(): Sets the milliseconds
+JavaScript
+const date = new Date();
+date.setDate(15);
+console.log(date); // Output: updated date
+3. Converting to String
+toLocaleString(): Returns a string representing the date and time in a locale-specific format
+toString(): Returns a string representing the date and time in a format like "Mon Jul 25 2022 14:30:00 GMT+0530 (Indian Standard Time)"
+toISOString(): Returns a string representing the date and time in ISO format
+JavaScript
+const date = new Date();
+console.log(date.toLocaleString()); // Output: locale-specific format
+console.log(date.toString()); // Output: default format
+console.log(date.toISOString()); // Output: ISO format
+4. Timezone
+getTimezoneOffset(): Returns the timezone offset in minutes
+JavaScript
+const date = new Date();
+console.log(date.getTimezoneOffset()); // Output: timezone offset in minutes
+Example Use Cases
+Displaying Current Date and Time
+JavaScript
+const date = new Date();
+console.log(date.toLocaleString()); // Output: current date and time in locale-specific format
+
+2.  **Calculating Time Difference**
+
+    ```javascript
+const date1 = new Date('2022-01-01T00:00:00.000Z');
+const date2 = new Date('2022-01-02T00:00:00.000Z');
+const timeDiff = date2.getTime() - date1.getTime();
+console.log(timeDiff); // Output: time difference in milliseconds
+Validating Date Input
+JavaScript
+const dateInput = '2022-07-25';
+const date = new Date(dateInput);
+if (!isNaN(date.getTime())) {
+console.log('Valid date');
+} else {
+console.log('Invalid date');
+}

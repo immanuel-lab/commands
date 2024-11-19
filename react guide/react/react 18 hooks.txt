@@ -1,0 +1,39 @@
+react 18 hooks
+
+
+State Hooks 
+1.useState
+2.useReducer
+
+Context Hooks 
+1.useContext
+
+
+Ref hooks
+useRef -declares a ref. You can hold any value in it, but most often it’s used to hold a DOM node.
+useImperativeHandle -lets you customize the ref exposed by your component. This is rarely used.
+
+
+Effect hooks
+useEffect
+useLayoutEffect --fires before the browser repaints the screen. You can measure layout here.
+useInsertionEffect fires before React makes changes to the DOM. Libraries can insert dynamic CSS here.
+
+
+
+Performance hooks
+useMemo -lets you cache the result of an expensive calculation.
+useCallback- lets you cache a function definition before passing it down to an optimized component.
+useTransition -lets you mark a state transition as non-blocking and allow other updates to interrupt it.
+useDeferredValue- lets you defer updating a non-critical part of the UI and let other parts update first.
+
+Resource hooks
+use lets you read the value of a resource like a Promise or context.
+
+
+
+These Hooks are mostly useful to library authors and aren’t commonly used in the application code.
+
+useDebugValue -lets you customize the label React DevTools displays for your custom Hook.
+useId- lets a component associate a unique ID with itself. Typically used with accessibility APIs.
+useSyncExternalStore -lets a component subscribe to an external store.
