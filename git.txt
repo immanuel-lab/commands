@@ -7,7 +7,8 @@ git push origin main(with branch name)-
 git clone-
 git branch-
 git checkout-
-git log-
+git log- shows all commit message
+git log --oneline -shows commit message in one line 
 git branch -d branch_name      -Delete a merged branch
 git branch -D branch_name     - Force delete an unmerged branch
 git remote -v
