@@ -1,0 +1,37 @@
+COMMANDS FOR BRANCHES
+
+
+
+Create a New Branch
+git branch <branch-name>: Creates a new branch with the specified name.
+git checkout -b <branch-name>: Creates a new branch and switches to it.
+
+
+List All Branches
+git branch: Lists all local branches.
+git branch -a: Lists all local and remote branches.
+git branch -r: Lists all remote branches.
+
+
+Switch Between Branches
+git checkout <branch-name>: Switches to the specified branch.
+git switch <branch-name>: Switches to the specified branch (Git version 2.23 and later).
+
+
+Merge Branches
+git merge <branch-name>: Merges the specified branch into the current branch.
+git merge --no-ff <branch-name>: Merges the specified branch into the current branch, preserving the branch history.
+
+
+Delete a Branch
+git branch -d <branch-name>: Deletes the specified local branch.
+git push origin --delete <branch-name>: Deletes the specified remote branch.
+
+
+
+Rename a Branch
+git branch -m <old-branch-name> <new-branch-name>: Renames the specified local branch.
+
+
+7. Push a Branch to Remote
+git push -u origin <branch-name>: Pushes the specified branch to the remote repository and sets the upstream tracking information.

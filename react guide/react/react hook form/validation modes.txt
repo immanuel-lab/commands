@@ -1,0 +1,18 @@
+
+onSubmit	string	Validation is triggered on the submit event, and inputs attach onChange event listeners to re-validate themselves.
+onBlur	 string	      Validation is triggered on the blur event.
+onChange	string	Validation is triggered on the changeevent for each input, leading to multiple re-renders. Warning: this often comes with a significant impact on performance.
+onTouched	string	Validation is initially triggered on the first blur event. After that, it is triggered on every change event.
+
+Note: when using with Controller, make sure to wire up onBlur with the render prop.
+all	string	Validation is triggered on both blur and change events.
+
+
+
+import { useForm } from 'react-hook-form';
+
+function MyForm() {
+  const { register, handleSubmit } = useForm({
+    mode: 'onChange',
+    reValidateMode: 'onBlur', // or 'onChange'
+  });

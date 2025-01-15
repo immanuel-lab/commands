@@ -1,0 +1,113 @@
+1..isDirty	boolean	
+Set to true after the user modifies any of the inputs.
+
+Important: Make sure to provide all inputs' defaultValues at the useForm, so hook form can have a single source of truth to compare whether the form is dirty.
+
+Copy
+const {
+  formState: { isDirty, dirtyFields },
+  setValue,
+} = useForm({ defaultValues: { test: "" } });
+
+// isDirty: true
+setValue('test', 'change')
+ 
+// isDirty: false because there getValues() === defaultValues
+setValue('test', '')
+File typed input will need to be managed at the app level due to the ability to cancel file selection and FileList object.
+
+Do not support custom object, Class or File object.
+
+2......dirtyFields	      object	
+An object with the user-modified fields. Make sure to provide all inputs' defaultValues via useForm, so the library can compare against the defaultValues.
+
+Important: Make sure to provide defaultValues at the useForm, so hook form can have a single source of truth to compare each field's dirtiness.
+
+Dirty fields will not represent as isDirty formState, because dirty fields are marked field dirty at field level rather the entire form. If you want to determine the entire form state use isDirty instead.
+
+touchedFields	object	An object containing all the inputs the user has interacted with.
+defaultValues	object	
+The value which has been set at useForm's defaultValues or updated defaultValues via reset API.
+
+isSubmitted            	boolean	Set to true after the form is submitted. Will remain true until the reset method is invoked.
+isSubmitSuccessful	       boolean	
+Indicate the form was successfully submitted without any runtime error.
+
+isSubmitting	boolean	true if the form is currently being submitted. false otherwise.
+isLoading	boolean	
+true if the form is currently loading async default values.
+
+Important: this prop is only applicable to async defaultValues
+
+Copy
+const { 
+  formState: { isLoading } 
+} = useForm({ 
+  defaultValues: async () => await fetch('/api') 
+});
+submitCount	number	Number of times the form was submitted.
+isValid	boolean	
+Set to true if the form doesn't have any errors.
+setError             has no effect on isValid formState, isValid will always derived via the entire form validation result.
+
+isValidating	     boolean	Set to true during validation.
+validatingFields	boolean	Capture fields which are getting async validation.
+errors	object	    An object with field errors. There is also an ErrorMessage component to retrieve error message easily.
+disabled	        boolean	Set to true if the form is disabled via the disabled prop in useForm.
+
+
+
+
+
+import { useForm } from 'react-hook-form';
+
+function MyForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: {
+	  isDirty
+      errors,
+      isValid,
+      isSubmitting,
+      isSubmitted,
+      touchedFields,
+      dirtyFields,
+      isValidating,
+    },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    console.log(data);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register('username', { required: true })} />
+      {errors.username && <div>{errors.username.message}</div>}
+      <button type="submit" disabled={!isValid || isSubmitting}>
+        Submit
+      </button>
+      <div>
+        <p>Is Valid: {isValid.toString()}</p>
+        <p>Is Submitting: {isSubmitting.toString()}</p>
+        <p>Is Submitted: {isSubmitted.toString()}</p>
+        <p>Touched Fields: {JSON.stringify(touchedFields)}</p>
+        <p>Dirty Fields: {JSON.stringify(dirtyFields)}</p>
+        <p>Is Validating: {isValidating.toString()}</p>
+      </div>
+    </form>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
