@@ -73,3 +73,64 @@ git blame -L 10,20 -c my_file.txt
 
 to add lines
 git blame -L 1,+2 "src\components\Abort.jsx"
+
+
+
+GIT SHOW
+
+
+git show is a Git command that displays the contents of a specific commit, including the changes made in that commit.
+Syntax
+Bash
+git show [options] <commit>
+s: Suppress the diff output.
+--name-only: Show only the names of the files changed.
+--name-status: Show the names and status of the files changed.
+--stat: Show the number of lines added and deleted.
+--patch: Show the patch introduced by the commit.
+-p: Same as --patch.
+
+
+
+Displaying a commit:
+Bash
+git show HEAD
+This will display the contents of the most recent commit, including the changes made.
+
+
+
+
+Displaying a specific commit:
+Bash
+git show <commit_hash>
+
+
+
+
+Showing the names of changed files:
+Bash
+git show --name-only HEAD
+This will display only the names of the files changed in the most recent commit.
+
+
+
+
+Showing the status of changed files:
+Bash
+git show --name-status HEAD
+This will display the names and status (added, deleted, modified) of the files changed in the most recent commit.
+
+
+
+
+Showing the diff:
+Bash
+git show -p HEAD
+
+
+
+Common Use Cases
+Reviewing commits: Use git show to review the changes made in a specific commit.
+Understanding commit history: Use git show to understand the changes made in a specific commit and how they fit into the overall commit history.
+Debugging: Use git show to identify the changes made in a specific commit that may have introduced a bug.
+Note: git show can be used with other Git commands, such as git log and git diff, to display additional information about the commit.
