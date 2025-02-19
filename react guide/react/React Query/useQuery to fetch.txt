@@ -1,0 +1,115 @@
+const getItems = async () => {
+    const response = await fetch("http://localhost:50000/items");
+    // console.log(response);
+    return response.json();
+  };
+
+  const { data, isLoading, error, isError } = useQuery({
+    queryKey: ["items"],
+    queryFn: getItems,
+    cacheTime: 1000 * 60 * 60, // 1 hour
+    // keepPreviousData: true,
+    refetchOnWindowFocus: false,
+  });
+  
+  
+  
+ 
+1.enabled: A boolean flag to enable or disable the query. If set to false, the query will not be executed.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  enabled: false,
+})
+
+
+2.retry: The number of times to retry the query if it fails.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  retry: 3,
+})
+
+
+
+
+3.retryDelay: The delay in milliseconds between retries.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  retryDelay: 1000,
+})
+
+
+4.onSuccess: A callback function to execute when the query is successful.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  onSuccess: (data) => console.log(data),
+})
+
+
+
+5.onError: A callback function to execute when the query fails.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  onError: (error) => console.error(error),
+})
+
+
+
+6.staleTime: The time in milliseconds to consider the data stale. If the data is older than this time, it will be refetched.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  staleTime: 1000 * 60 * 60, // 1 hour
+})
+
+
+
+7.cacheTime: The time in milliseconds to keep the data in the cache.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  cacheTime: 1000 * 60 * 60, // 1 hour
+})
+
+
+8.meta: An object to store metadata about the query.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  meta: {
+    // metadata
+  },
+})
+
+
+
+9.initialData: The initial data to return while the query is loading.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  initialData: [],
+})
+
+
+
+
+10.select: A function to transform the data returned by the query.
+Jsx
+useQuery({
+  queryKey: ["items"],
+  queryFn: getItems,
+  select: (data) => data.map((item) => item.name),
+})

@@ -1,0 +1,36 @@
+useMutation
+
+const {
+  data,
+  error,
+  isError,
+  isIdle,
+  isPending,
+  isPaused,
+  isSuccess,
+  failureCount,
+  failureReason,
+  mutate,
+  mutateAsync,
+  reset,
+  status,
+  submittedAt,
+  variables,
+} = useMutation(
+  {
+    mutationFn,
+    gcTime,
+    meta,
+    mutationKey,
+    networkMode,
+    onError,
+    onMutate,
+    onSettled,
+    onSuccess,
+    retry,
+    retryDelay,
+    scope,
+    throwOnError,
+  },
+  queryClient,
+)

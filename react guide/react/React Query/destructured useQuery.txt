@@ -1,0 +1,73 @@
+const {
+  data,
+  dataUpdatedAt,
+  error,
+  errorUpdatedAt,
+  failureCount,
+  isError,
+  isFetching,
+  isIdle,
+  isLoading,
+  isLoadingError,
+  isPaused,
+  isPreviousData,
+  isRefetching,
+  isStale,
+  isSuccess,
+  refetch,
+  remove,
+  status,
+} = useQuery(
+  {
+    queryKey,
+    queryFn,
+	staleTime,
+    gcTime,
+	refetchOnWindowFocus,
+    enabled,
+    networkMode,
+    initialData,
+    initialDataUpdatedAt,
+    meta,
+    notifyOnChangeProps,
+    placeholderData,
+    queryKeyHashFn,
+    refetchInterval,
+    refetchIntervalInBackground,
+    refetchOnMount,
+    refetchOnReconnect,
+    
+    retry,
+    retryOnMount,
+    retryDelay,
+    select,
+   structuralSharing,
+    subscribed,
+    throwOnError,
+  },
+  queryClient,
+)
+
+
+
+
+Here's a brief explanation of each property:
+data: The data returned by the query.
+dataUpdatedAt: The timestamp when the data was last updated.
+error: The error returned by the query, if any.
+errorUpdatedAt: The timestamp when the error was last updated.
+failureCount: The number of times the query has failed.
+isError: A boolean indicating whether the query has returned an error.
+isFetching: A boolean indicating whether the query is currently fetching data.
+isIdle: A boolean indicating whether the query is idle (i.e., not fetching or loading).
+isLoading: A boolean indicating whether the query is currently loading.
+isLoadingError: A boolean indicating whether the query is currently loading and has returned an error.
+isPaused: A boolean indicating whether the query is currently paused.
+isPreviousData: A boolean indicating whether the data is from a previous query.
+isRefetching: A boolean indicating whether the query is currently refetching data.
+isStale: A boolean indicating whether the data is stale.
+isSuccess: A boolean indicating whether the query has returned data successfully.
+refetch: A function to refetch the data.
+remove: A function to remove the query from the cache.
+status: A string indicating the current status of the query (e.g., "loading", "error", "success").
+

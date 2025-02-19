@@ -1,0 +1,24 @@
+
+
+import { Helmet } from 'react-helmet';
+
+
+
+
+ <Helmet>
+        <title>My Page</title>
+        
+		 <meta name="description" content="Free Web tutorials">
+		  <meta name="keywords" content="HTML, CSS, JavaScript">
+		  <meta name="author" content="John Doe">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </Helmet>
+  
+  
+   the Helmet component is used to update the document's title and meta tags.
+  
+  
+  Using React Helmet provides several benefits, including:
+Improved SEO: By managing your document's head section, you can improve your website's SEO.
+Easy to use: React Helmet provides a declarative API that makes it easy to manage your document's head section.
+Flexible: React Helmet supports multiple head sections, making it a great choice for complex applications.

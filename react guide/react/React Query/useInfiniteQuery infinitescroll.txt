@@ -1,0 +1,61 @@
+const {
+    data,
+    error,
+    fetchNextPage,
+	isLoading,
+	isError,
+    hasNextPage,
+    isFetching,
+    isFetchingNextPage,
+    status,
+  } =
+useInfiniteQuery({
+  queryKey, // required
+  queryFn, // required
+  enabled, // optional
+  retry, // optional
+  retryDelay, // optional
+  staleTime, // optional
+  cacheTime, // optional
+  refetchOnWindowFocus, // optional
+  refetchOnMount, // optional
+  refetchOnReconnect, // optional
+  refetchInterval, // optional
+  initialData, // optional
+  initialPageParam, // optional
+  getNextPageParam, //funtion required for infinite queries
+  getPreviousPageParam, // optional
+  onSuccess, // optional
+  onError, // optional
+  onSettled, // optional
+  select, // optional
+  keepPreviousData, // optional
+  meta, // optional
+});
+
+
+
+
+Here's a brief explanation of each property:
+queryKey: A unique key for the query.
+queryFn: A function that fetches the data from the API.
+enabled: A boolean flag to enable or disable the query.
+retry: The number of times to retry the query if it fails.
+retryDelay: The delay in milliseconds between retries.
+staleTime: The time in milliseconds to consider the data stale.
+cacheTime: The time in milliseconds to keep the data in the cache.
+refetchOnWindowFocus: A boolean flag to refetch the data when the window is focused.
+refetchOnMount: A boolean flag to refetch the data when the component is mounted.
+refetchOnReconnect: A boolean flag to refetch the data when the network connection is reestablished.
+refetchInterval: The interval in milliseconds to refetch the data.
+initialData: The initial data to return while the query is loading.
+initialPageParam: The initial page parameter to use when fetching the first page of data.
+getNextPageParam: A function that returns the next page parameter.
+getPreviousPageParam: A function that returns the previous page parameter.
+onSuccess: A callback function to execute when the query is successful.
+onError: A callback function to execute when the query fails.
+onSettled: A callback function to execute when the query is settled (i.e., either successful or failed).
+select: A function to transform the data returned by the query.
+keepPreviousData: A boolean flag to keep the previous data when the query is refetched.
+meta: An object to store metadata about the query.
+

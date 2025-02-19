@@ -1,0 +1,30 @@
+
+Here are the main hooks provided by React Query:
+1. useQuery
+Fetches data from a query and returns the result.
+Automatically manages loading, error, and success states.
+2. useInfiniteQuery
+Fetches data from a query and returns the result.
+Designed for infinite loading (e.g., pagination).
+Automatically manages loading, error, and success states.
+3. useMutation
+Sends a mutation request (e.g., POST, PUT, DELETE) and returns the result.
+Automatically manages loading, error, and success states.
+4. useQueryClient
+Provides access to the Query Client instance.
+Allows you to manually invalidate, refetch, or cancel queries.
+5. useIsFetching
+Returns a boolean indicating whether a query is currently fetching.
+6. useIsMutating
+Returns a boolean indicating whether a mutation is currently in progress.
+7. useQueryError
+Returns the error object for a query (if it exists).
+8. useQueryData
+Returns the data for a query (if it exists).
+9. useInfiniteQueryData
+Returns the data for an infinite query (if it exists).
+10. useMutationResult
+Returns the result of a mutation (if it exists).
+These hooks provide a powerful way to manage data fetching and caching in your React applications.
+11.useQeries
+The useQueries hook can be used to fetch a variable number of queries:

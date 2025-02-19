@@ -1,0 +1,89 @@
+NOTIFICATIONS
+
+
+
+1.to check notification is granted
+
+Notification.requestPermission().then((perm) => {console.log(perm))
+
+perm will be either "granted" or "denied"
+
+if it is granted we can use notification objects
+
+
+
+2.like this 
+
+  Create new notification object
+
+ Notification.requestPermission().then((perm) => {
+      if (perm === "granted") {
+        const notification = new Notification("New Message", {
+          body: "your number is 123",
+          tag: "welcome",
+        });
+      } else {
+        alert("please turn on notification");
+      }
+    });
+	
+	
+	
+	here first param is the heading message 
+	
+	
+	second param is object which has these
+	
+	
+const notification = new Notification('Hello, World!', {
+  body: 'This is a sample notification.',
+  icon: 'https://example.com/icon.png',
+  vibrate: [100, 50, 100],
+  sound: 'https://example.com/sound.mp3',
+  dir: 'ltr',
+  lang: 'en-US',
+  tag: 'sample-notification',
+});
+
+
+body: The body text of the notification.
+icon: The URL of an icon to display in the notification.
+badge: The URL of an image to display as a badge.
+vibrate: A vibration pattern to use when the notification is displayed.
+sound: A sound to play when the notification is displayed.
+dir: The direction of the notification text (either 'auto', 'ltr', or 'rtl').
+lang: The language of the notification text.
+tag: A unique identifier for the notification.when we use it ,it will override the other message ,so notification will only be one time
+renotify: A boolean indicating whether the notification should be re-displayed if it's already active.
+
+
+
+
+useEffect(() => {
+    let notification;
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") {
+        Notification.requestPermission().then((perm) => {
+          if (perm === "granted") {
+            notification = new Notification("New Message", {
+              body: "you have left the page..please come back!!!",
+              tag: "welcome",
+            });
+          } else {
+            alert("please turn on notification");
+          }
+        });
+      } else {
+        notification.close();
+      }
+    });
+
+    return () => {
+      document.removeEventListener("visibilitychange", () => {});
+    };
+  }, []);
+
+
+
+
+
